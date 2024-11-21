@@ -1,0 +1,42 @@
+<script>
+    document.getElementById('generate-description-btn').addEventListener('click', function() {
+      const nom = document.getElementById('id_nom').value;
+  
+      if (nom.trim() === '') {
+          alert('Please enter the name of the plant (Nom de la plante).');
+          return;
+      }
+  
+      // AJAX call to generate description
+      fetch("/generate_description/", {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+              'X-CSRFToken': '{{ csrf_token }}',
+          },
+          body: JSON.stringify({ nom: nom })
+      })
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+          return response.json();
+      })
+      .then(data => {
+          if (data.description) {
+              document.getElementById('id_description').value = data.description;
+          } else {
+              alert('Error: Unable to generate description');
+          }
+      })
+      .catch(error => console.error('Error:', error));
+  });
+  </script>
+
+
+
+
+
+
+ <!-- Button to Generate Description -->
+ <button type="button" id="generate-description-btn" class="btn btn-secondary mt-3">Générer Description</button>

@@ -1,0 +1,110 @@
+<!-- accounts/templates/accounts/register.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            height: 100vh; /* S'assure que le corps prend toute la hauteur de la fenêtre */
+            display: flex;
+            justify-content: center; /* Centre horizontalement */
+            align-items: center; /* Centre verticalement */
+            background-color: #e6ffe6; /* Fond vert clair */
+        }
+   
+        .container {
+            width: 100%; /* Utiliser toute la largeur disponible */
+            max-width: 600px; /* Ajustez cette valeur selon vos besoins */
+            background: rgba(255, 255, 255, 0.9); /* Fond blanc légèrement transparent */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+   
+        h1 {
+            text-align: center;
+            color: #4caf50; /* Couleur verte pour le titre */
+        }
+   
+        .form-group {
+            margin-bottom: 15px;
+        }
+   
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+   
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+   
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="email"]:focus {
+            border-color: #4caf50; /* Couleur verte au focus */
+        }
+   
+        .btn-submit {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50; /* Couleur verte du bouton */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+   
+        .btn-submit:hover {
+            background-color: #388e3c; /* Couleur verte plus foncée au survol */
+        }
+   
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+       
+    </style>
+   
+</head>
+<body>
+    <div class="container">
+        <h1>Inscription</h1>
+
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+           
+            {% for field in form %}
+                <div class="form-group">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    {{ field }}
+                    {% if field.errors %}
+                        <div class="error-message">
+                            {{ field.errors }}
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+           
+            <button type="submit" class="btn-submit">S'inscrire</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Déconnexion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            height: 100vh; /* S'assure que le corps prend toute la hauteur de la fenêtre */
+            display: flex;
+            justify-content: center; /* Centre horizontalement */
+            align-items: center; /* Centre verticalement */
+            background-color: #e6ffe6; /* Fond vert clair */
+        }
+
+
+        .container {
+            max-width: 400px; /* Largeur maximale de la carte */
+            background: rgba(255, 255, 255, 0.9); /* Fond blanc légèrement transparent */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            text-align: center; /* Centre le texte */
+        }
+
+
+        h2 {
+            color: #4caf50; /* Couleur verte pour le titre */
+        }
+
+
+        a {
+            display: inline-block; /* Affichage en bloc pour centrer le lien */
+            margin-top: 15px;
+            padding: 10px 20px; /* Espacement autour du lien */
+            background-color: #4caf50; /* Fond vert */
+            color: white; /* Couleur du texte */
+            text-decoration: none; /* Supprime le soulignement */
+            border-radius: 4px; /* Arrondir les coins */
+        }
+
+
+        a:hover {
+            background-color: #388e3c; /* Couleur verte plus foncée au survol */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Vous êtes déconnecté</h2>
+        <a href="{% url 'login' %}">Se reconnecter</a>
+    </div>
+</body>
+</html>
+
+
+
