@@ -1,21 +1,3 @@
-{% include 'navbackoffice.html' %}
-
-<div class="container my-5">
-    <div class="row">
-      <div class="col-md-8 offset-md-2">
-    <h1>Détails du Plante</h1>
-    
-    <h2><strong>Nom:</strong> {{ plante.nom }}</h2>
-    
-    <p><strong>Description:</strong> {{ plante.description }}</p>
-    <p><strong>Type Plante:</strong> {{ plante.type_plante }}</p>
-    {% if plante.image %}
-    <img src="{{ plante.image.url }}" alt="{{ plante.nom }}" class="img-fluid mb-3 d-block ">
-    {% endif %}
-    <a href="/plantes/{{ plante.pk }}/update/" class="btn btn-primary">Modifier</a>
-    <a href="/plantes/" class="btn btn-secondary">Retour à la liste</a>
-</div>
-    </div>
-</div>
-<!-- Include Bootstrap CSS if not already included -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+version https://git-lfs.github.com/spec/v1
+oid sha256:ffb8c49c6056fbcafd3110a231056ecf82d693708595284c365ff1d7300e14c3
+size 830

@@ -1,16 +1,3 @@
-"""
-WSGI config for plant_ai_django project.
-
-It exposes the WSGI callable as a module-level variable named ``application``.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/5.0/howto/deployment/wsgi/
-"""
-
-import os
-
-from django.core.wsgi import get_wsgi_application
-
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'plant_ai_django.settings')
-
-application = get_wsgi_application()
+version https://git-lfs.github.com/spec/v1
+oid sha256:c885ac1fac00319342354e4561bd1a15157798e448248db9c744a1e240eba238
+size 407

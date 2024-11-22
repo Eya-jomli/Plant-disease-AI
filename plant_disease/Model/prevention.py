@@ -1,10 +1,3 @@
-from django.db import models
-from plant_disease.Model.Symptome import  Symptome
-class prevention(models.Model):
-    """Modèle représentant les mesures préventives pour les maladies des plantes."""
-    nom = models.CharField(max_length=100)
-    description = models.TextField()
-    symptômes_connexes = models.ForeignKey(Symptome, on_delete=models.CASCADE, related_name='mesures_préventives')
-
-    def __str__(self):
-        return self.nom
+version https://git-lfs.github.com/spec/v1
+oid sha256:2d63fd1956ab58864fca8e0e0c8f0e9a4ddf1466f26e2d369f7be0c135d83151
+size 444

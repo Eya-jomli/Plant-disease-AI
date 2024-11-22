@@ -1,12 +1,3 @@
-<!-- diagnostics/diagnostic_confirm_delete.html -->
-{% extends "base.html" %}
-
-{% block content %}
-<h2>Confirmer la suppression</h2>
-<p>Êtes-vous sûr de vouloir supprimer le diagnostic de {{ diagnostic.plante.nom }} concernant {{ diagnostic.maladie.nom }}?</p>
-<form method="post">
-    {% csrf_token %}
-    <button type="submit">Confirmer</button>
-</form>
-<a href="{% url 'diagnostic-list' %}">Annuler</a>
-{% endblock %}
+version https://git-lfs.github.com/spec/v1
+oid sha256:652b18c04840b6fd0fe59e87350e0684cdb9ba4b1cf2d0903d3bfea471c1997c
+size 423

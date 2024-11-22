@@ -1,12 +1,3 @@
-{% include "../navbackoffice.html" %}
-
-{% block content %}
-
-<h2>Supprimer la Cause de Maladie</h2>
-<p>Êtes-vous sûr de vouloir supprimer "{{ cause_maladie.nom }}" ?</p>
-<form method="post">
-    {% csrf_token %}
-    <button type="submit">Supprimer</button>
-</form>
-<a href="{% url 'cause_maladie-list' %}">Annuler</a>
-{% endblock %}
+version https://git-lfs.github.com/spec/v1
+oid sha256:11382a00738ee5f0750c5ff48cc0a69ec78f963cb11894e3eab6f2170e16aee3
+size 334

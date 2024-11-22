@@ -1,14 +1,3 @@
-# models.py (for CauseMaladie)
-from django.db import models
-from plant_disease.Model.maladie import Maladie  # Ensure this import is correct
-
-class CauseMaladie(models.Model):
-    nom = models.CharField(max_length=100)
-    description = models.TextField()
-    type = models.CharField(max_length=100)
-
-    # ForeignKey to Maladie with a unique related_name
-    maladie = models.ForeignKey(Maladie, on_delete=models.CASCADE, related_name='cause_maladies', null=True)  
-    
-    def __str__(self):
-        return self.nom
+version https://git-lfs.github.com/spec/v1
+oid sha256:0e5690b26068bcd52b56c425b21972f79e0972c72234c1300b727220b59a8e44
+size 519

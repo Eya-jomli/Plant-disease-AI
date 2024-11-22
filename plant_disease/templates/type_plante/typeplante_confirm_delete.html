@@ -1,21 +1,3 @@
-{% include 'navbackoffice.html' %}
-
-
-{% block content %}
-<div class="container my-5">
-  <div class="row">
-    <div class="col-md-8 offset-md-2">
-      <h1 class="text-center text-danger">Supprimer {{ plante.nom }} ?</h1>
-      <p class="text-center">Êtes-vous sûr de vouloir supprimer cette plante ? Cette action est irréversible.</p>
-      <form method="POST" class="text-center">
-        {% csrf_token %}
-        <button type="submit" class="btn btn-danger">Confirmer la suppression</button>
-        <a href="{% url 'plante-list' %}" class="btn btn-secondary">Annuler</a>
-      </form>
-    </div>
-  </div>
-</div>
-{% endblock %}
-
-
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:46173e0265122ceae0475a7ad420c443e303e716e687d07f43835aa0268d5751
+size 636

@@ -1,19 +1,3 @@
-# models.py (for Maladie)
-from django.db import models
-from plant_disease.Model.plant import Plante  # Ensure this import is correct
-
-class Maladie(models.Model):
-    nom = models.CharField(max_length=100)
-    description = models.TextField()
-    type = models.CharField(
-        max_length=50,
-        choices=[
-            ('bactérienne', 'Bactérienne'),
-            ('fongique', 'Fongique'),
-            ('virale', 'Virale'),
-        ]
-    )
-    plantes = models.ManyToManyField(Plante, related_name='maladies')
-
-    def __str__(self):
-        return self.nom
+version https://git-lfs.github.com/spec/v1
+oid sha256:9063bde1d01691a7c0fd896492410c160e6b725fbbc2ea24d490aa749b9605bb
+size 565

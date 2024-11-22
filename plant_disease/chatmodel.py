@@ -1,20 +1,3 @@
-import torch
-import torch.nn as nn
-
-
-class NeuralNet(nn.Module):
-    def __init__(self, input_size, hidden_size, num_classes):
-        super(NeuralNet, self).__init__()
-        self.l1 = nn.Linear(input_size, hidden_size) 
-        self.l2 = nn.Linear(hidden_size, hidden_size) 
-        self.l3 = nn.Linear(hidden_size, num_classes)
-        self.relu = nn.ReLU()
-    
-    def forward(self, x):
-        out = self.l1(x)
-        out = self.relu(out)
-        out = self.l2(out)
-        out = self.relu(out)
-        out = self.l3(out)
-        # no activation and no softmax at the end
-        return out
+version https://git-lfs.github.com/spec/v1
+oid sha256:140130c41005f9eda2a96e2dfab58a04c2ac7adb959d37f96491426acdaddb11
+size 598

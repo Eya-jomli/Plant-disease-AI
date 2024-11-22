@@ -1,11 +1,3 @@
-from django.db import models
-from plant_disease.Model.typePlant import TypePlante
-
-class Plante(models.Model):
-    nom = models.CharField(max_length=100)
-    description = models.TextField()
-    image = models.ImageField(upload_to='images/plantes/', blank=True, null=True)
-    type_plante = models.ForeignKey(TypePlante, on_delete=models.CASCADE, related_name='plantes')
-
-    def __str__(self):
-        return self.nom
+version https://git-lfs.github.com/spec/v1
+oid sha256:bfbdf8a8667215e269c4e4a00b2af33631556dc27c001d8375532481f0f4df39
+size 418

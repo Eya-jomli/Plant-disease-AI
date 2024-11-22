@@ -1,20 +1,3 @@
-from django.db import models
-from plant_disease.Model.plant import Plante
-
-class Pest(models.Model):
-    MALADIE_TYPES = [
-        ('insecte', 'Insecte'),
-        ('champignon', 'Champignon'),
-        ('bacterie', 'Bactérie'),
-        ('virus', 'Virus'),
-        ('nematode', 'Nématode'),
-    ]
-
-    nom = models.CharField(max_length=100)
-    type = models.CharField(max_length=50, choices=MALADIE_TYPES)  # Ajout des choix ici
-    description = models.TextField()
-    image = models.ImageField(upload_to='images/pests/', blank=True, null=True)
-    plantes = models.ManyToManyField(Plante, related_name='pests')
-
-    def __str__(self):
-        return self.nom
+version https://git-lfs.github.com/spec/v1
+oid sha256:b3dc0d2ae03c3744ab10358cd24ae5a2d3539c47d858d8f38e2be626ffaa1d34
+size 662

@@ -1,11 +1,3 @@
-from django.db import models
-
-
-class TypePlante(models.Model):
-    nom = models.CharField(max_length=100)
-    description = models.TextField()
-    image = models.ImageField(upload_to='images/plantes/', blank=True, null=True)
-
-    def __str__(self):
-        return self.nom
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:b0aeaceae0d0ebb94ed450a42d36eda56029e211e8d0ca5fd8ba297ef30fdf0d
+size 274
